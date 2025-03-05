@@ -1,0 +1,28 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Database files
+*.sql
+mysql_data/
+
+# Build files
+dist/
+build/
+
+# IDE/editor settings
+.vscode/
+.idea/
+.DS_Store
+
+# React frontend
+auth-frontend/node_modules/
+auth-frontend/build/
