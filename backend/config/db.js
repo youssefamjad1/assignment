@@ -2,6 +2,7 @@ const mysql = require('mysql2');
 require('dotenv').config({ path: '../../.env' }); 
 
 const DATABASE_URL = process.env.DATABASE_URL;
+console.log(DATABASE_URL);
 
 if (!DATABASE_URL) {
   console.error('DATABASE_URL not set in .env');
