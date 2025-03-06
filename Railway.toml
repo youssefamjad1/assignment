@@ -6,9 +6,4 @@ start_command = "npm start"
 
 # Optional: If you want to specify specific environment variables
 [env]
-DB_HOST=mysql.railway.internal      
-DB_USER=root
-DB_PASSWORD=GwgFXvjahRiphkCwuwWRlKxXbeGEyMek  
-DB_NAME=railway         
-DB_PORT=3306
-JWT_SECRET=mysecretkey
+DATABASE_URL=mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@mysql.railway.internal:3306/railway
