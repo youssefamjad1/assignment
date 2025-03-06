@@ -6,4 +6,4 @@ start_command = "npm start"
 
 # Optional: If you want to specify specific environment variables
 [env]
-DATABASE_URL=mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@mysql.railway.internal:3306/railway
+DATABASE_URL=mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@turntable.proxy.rlwy.net:13431/railway
