@@ -10,5 +10,3 @@ start_command = "npm run dev --prefix backend"
 
 [env]
 DATABASE_URL = "mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@turntable.proxy.rlwy.net:13431/railway"
-
-
