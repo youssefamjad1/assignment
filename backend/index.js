@@ -1,17 +1,19 @@
-const mysql = require('mysql2');
 require('dotenv').config({ path: '../.env' });
+const express = require('express');
+const cors = require('cors');
+const db = require('./config/db');
+const authRoutes = require('./routes/authRoutes');
 
-console.log("DATABASE_URL:", process.env.DATABASE_URL ? "Loaded" : "Not set");
+const app = express();
+// Middleware to parse incoming requests with JSON payloads
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
-// Create MySQL connection using DATABASE_URL
-const db = mysql.createConnection(process.env.DATABASE_URL);
+// Routes
+app.use('/api/auth', authRoutes);
 
-db.connect((err) => {
-  if (err) {
-    console.error("Database connection failed:", err);
-    return;
-  }
-  console.log("✅ Connected to the database");
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
-
-module.exports = db;
