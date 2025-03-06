@@ -6,7 +6,7 @@ build_dir = "backend"
 build_command = "npm install --prefix backend"
 
 # Use the correct start command for your backend
-start_command = "npm run dev --prefix backend"
+start_command = "npm start --prefix backend"
 
 [env]
 DATABASE_URL = "mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@turntable.proxy.rlwy.net:13431/railway"
