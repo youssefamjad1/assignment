@@ -1,0 +1,14 @@
+[build]
+# Point to the backend folder
+build_dir = "backend"
+build_command = "npm install"
+start_command = "npm start"
+
+# Optional: If you want to specify specific environment variables
+[env]
+DB_HOST=mysql.railway.internal      
+DB_USER=root
+DB_PASSWORD=GwgFXvjahRiphkCwuwWRlKxXbeGEyMek  
+DB_NAME=railway         
+DB_PORT=3306
+JWT_SECRET=mysecretkey
