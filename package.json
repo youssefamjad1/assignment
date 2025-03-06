@@ -3,6 +3,6 @@
     "dotenv": "^16.4.7"
   },
   "scripts": {
-    "start": "cd backend && npm start"
+    "start": "npm run start --prefix backend"
   }
 }
