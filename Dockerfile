@@ -1,20 +1,23 @@
 # Use a Node.js base image
 FROM node:16
 
-# Set the working directory in the container
-WORKDIR /app
+# Set the working directory to /internship-api
+WORKDIR /internship-api
 
-# Copy package.json and package-lock.json
-COPY backend/package*.json ./
+# Copy the package.json and package-lock.json from the backend folder
+COPY backend/package*.json ./backend/
 
-# Install dependencies
-RUN npm install
+# Install dependencies for the backend
+RUN npm install --prefix backend
 
-# Copy the rest of the backend code
-COPY backend/ .
+# Copy the rest of the backend code into the container
+COPY backend/ ./backend/
 
-# Expose the port your backend will run on
+# Expose the port your backend will run on (5000 in this case)
 EXPOSE 5000
 
-# Start the backend server
+# Set the working directory for running the backend
+WORKDIR /internship-api/backend
+
+# Start the backend server using npm
 CMD ["npm", "start"]

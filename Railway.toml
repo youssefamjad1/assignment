@@ -1,9 +1,12 @@
 [build]
 # Point to the backend folder
 build_dir = "backend"
-build_command = "npm install"
-start_command = "npm start"
 
-# Optional: If you want to specify specific environment variables
+# Run npm install from the backend folder
+build_command = "npm install --prefix backend"
+
+# Start the backend server from the backend folder
+start_command = "npm start --prefix backend"
+
 [env]
-DATABASE_URL=mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@turntable.proxy.rlwy.net:13431/railway
+DATABASE_URL = "mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@turntable.proxy.rlwy.net:13431/railway"
