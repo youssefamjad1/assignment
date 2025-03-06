@@ -1,12 +1,13 @@
 [build]
-# Point to the backend folder
+# Point to the root directory of the backend
 build_dir = "backend"
 
-# Run npm install from the backend folder
+# Run npm install in the backend directory
 build_command = "npm install --prefix backend"
 
-# Start the backend server from the backend folder
-start_command = "npm start --prefix backend"
+# Start the backend from the backend directory
+start_command = "npm run dev --prefix backend"
 
 [env]
 DATABASE_URL = "mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@turntable.proxy.rlwy.net:13431/railway"
+
