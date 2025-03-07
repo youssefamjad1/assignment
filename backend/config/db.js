@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 require('dotenv').config({ path: '../../.env' }); 
 
 const DATABASE_URL = process.env.DATABASE_URL;
-console.log(DATABASE_URL);
+console.log("DATABASE_URL:", DATABASE_URL);
 
 if (!DATABASE_URL) {
   console.error('DATABASE_URL not set in .env');
@@ -16,15 +16,15 @@ const dbUrl = new URL(DATABASE_URL);
 console.log("Database URL:", DATABASE_URL);
 console.log("DB Host:", dbUrl.hostname);
 console.log("DB Port:", dbUrl.port);
-console.log("DB User:", dbUrl.auth ? dbUrl.auth.split(':')[0] : 'Not set');
-console.log("DB Password:", dbUrl.auth ? '****' : 'Not set');
+console.log("DB User:", dbUrl.username ? dbUrl.username : 'Not set');
+console.log("DB Password:", dbUrl.password ? '****' : 'Not set');
 console.log("DB Name:", dbUrl.pathname ? dbUrl.pathname.substring(1) : 'Not set');
 
 // Create MySQL connection using parsed values
 const db = mysql.createConnection({
   host: dbUrl.hostname,
-  user: dbUrl.auth ? dbUrl.auth.split(':')[0] : '',  // Extract username
-  password: dbUrl.auth ? dbUrl.auth.split(':')[1] : '',  // Extract password
+  user: dbUrl.username || '',  // Extract username
+  password: dbUrl.password || '',  // Extract password
   database: dbUrl.pathname ? dbUrl.pathname.substring(1) : '',  // Extract database name
   port: dbUrl.port || 3306  // Default to 3306 if no port is provided
 });
