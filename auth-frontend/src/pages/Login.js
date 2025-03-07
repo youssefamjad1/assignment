@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
     const user = { email, password };
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', user);
+      const response = await axios.post('https://assignment-production-e613.up.railway.app/api/auth/login', user);
       console.log('Login response:', response); // Log response to check the status
 
       // Check if the login was successful

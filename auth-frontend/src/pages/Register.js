@@ -14,7 +14,7 @@ function Register() {
     const user = { name, email, password };
     console.log('Submitting user:', user); // Log the user object to check values
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', user);
+      const response = await axios.post('https://assignment-production-e613.up.railway.app/api/auth/register', user);
       alert(response.data.message); // Display success message from backend
       navigate('/login'); // Redirect to login page after successful registration
     } catch (error) {
