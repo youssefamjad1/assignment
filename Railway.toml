@@ -6,7 +6,7 @@ build_dir = "."
 build_command = "npm install --prefix backend"
 
 # Run the correct start command in the backend folder
-start_command = "bash -c 'cd backend && npm install && npm start'"
+start_command = "cd backend && npm install && npm start"
 
 [env]
 DATABASE_URL = "mysql://root:GwgFXvjahRiphkCwuwWRlKxXbeGEyMek@turntable.proxy.rlwy.net:13431/railway"
