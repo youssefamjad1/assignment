@@ -2,7 +2,7 @@
 FROM node:20
 
 # Set the working directory to the backend folder inside the container
-WORKDIR /internship-api/backend
+WORKDIR /assignment/backend
 
 # Copy only package.json and package-lock.json first (for efficient caching)
 COPY backend/package*.json ./
