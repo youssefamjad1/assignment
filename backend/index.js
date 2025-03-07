@@ -14,6 +14,8 @@ app.use(cors());
 app.use('/api/auth', authRoutes);
 
 const port = process.env.PORT || 5000;
+console.log("Node.js version:", process.version);
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

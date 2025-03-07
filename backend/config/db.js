@@ -10,8 +10,8 @@ if (!DATABASE_URL) {
 }
 
 // Parse the DATABASE_URL into components
-const url = require('url');
-const dbUrl = url.parse(DATABASE_URL);
+const { URL } = require('url');
+const dbUrl = new URL(DATABASE_URL);
 
 console.log("Database URL:", DATABASE_URL);
 console.log("DB Host:", dbUrl.hostname);
